@@ -1,0 +1,487 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 200vh;
+}
+
+/* Navigation styles */
+nav {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+}
+
+.nav-toggle-label {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-toggle-label span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: transform 0.3s ease;
+  color: #0a82b5;
+}
+
+.nav-toggle-label span:nth-child(1) {
+  top: 0;
+}
+
+.nav-toggle-label span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-toggle-label span:nth-child(3) {
+  bottom: 0;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+#nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+  transform: translateY(12px) rotate(45deg);
+}
+
+#nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+  opacity: 0;
+}
+
+#nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+  transform: translateY(-12px) rotate(-45deg);
+}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-menu li {
+  margin-left: 20px;
+}
+
+.nav-menu li a {
+  color: rgb(11, 137, 179);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #f44336;
+}
+/* akhir navigasi */
+/* lading page 1 */
+.landing-section {
+  min-height: 100vh;
+  margin-bottom: 200px;
+  display: flex;
+  align-items: center;
+  background-image: url('gambaar\ 5.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+}
+
+.landing-content {
+  text-align: center;
+  color: white;
+}
+.landing-section h1 {
+  font-family: 'Geologica', sans-serif;
+  font-size: 50px;
+  margin-bottom: 5px;
+}
+
+.landing-section p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 25spx;
+  margin-top: 5px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+/* akhir landing page 1 */
+/* Seection 2 */
+.about {
+  min-height: 100vh;
+  margin-bottom: 50px; /* Sesuaikan jarak yang diinginkan */
+  display: flex;
+  align-items: center;
+  background-image: url(github\ 1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; /* Mengatur posisi gambar di sebelah kiri tengah */
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 90vh; /* Anda bisa menyesuaikan tinggi elemen sesuai kebutuhan */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'poppins', sans-serif;
+}
+
+.about h2 {
+  font-family: 'Geologica', sans-serif;
+  margin-bottom: 1px; /* Menambahkan jarak antara h2 dan gambar */
+}
+
+.about-image img {
+  width: 200px; /* Ubah ukuran sesuai kebutuhan Anda */
+  height: 200px; /* Ubah ukuran sesuai kebutuhan Anda */
+  border-radius: 100%; /* Mengatur gambar menjadi bulat dengan border-radius setengah dari lebar/tinggi */
+}
+
+.about p {
+  font-family: 'poppins', sans-serif;
+  flex: 0 0 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+/* Media queries untuk mengubah gaya paragraf pada layar yang lebih lebar */
+@media screen and (min-width: 601px) {
+  .about p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about p {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+}
+/* akhir section 2 */
+/* section 3 */
+.sub {
+  min-height: 100vh;
+  background-image: url(github\ 6.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.sub .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.sub .card {
+  width: 100%;
+  max-width: 300px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 5px;
+  margin-right: 10px; /* Jarak horizontal antara card */
+  margin-bottom: 30px; /* Jarak vertical antara card */
+  transition: transform 0.3s;
+  background-position: center; /* Mengatur posisi latar belakang ke tengah */
+  background-repeat: no-repeat; /* Menghindari pengulangan latar belakang */
+  background-size: cover; /* Mengatur latar belakang agar mencakup seluruh card */
+  text-align: center;
+  justify-content: center;
+}
+
+.sub .card-cover1 {
+  background-image: url('gambar\ 16.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.sub .card-cover2 {
+  background-image: url('gambar\ 11.jpg');
+  background-size: cover;
+}
+
+.sub .card-cover3 {
+  background-image: url('gambar\ 15.jpg');
+  background-size: cover;
+}
+
+.sub .card-cover4 {
+  background-image: url('gambar\ 1.jpg');
+  background-size: cover;
+}
+.sub .card:hover {
+  transform: translateY(-10px);
+}
+
+.sub .card-cover1,
+.sub .card-cover2,
+.sub .card-cover3,
+.sub .card-cover4 {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  cursor: pointer;
+  align-items: center;
+  position: relative;
+}
+
+.sub .card-content {
+  padding: 20px;
+  display: none;
+}
+
+.sub .card-cover1:hover + .card-content,
+.sub .card-cover2:hover + .card-content,
+.sub .card-cover3:hover + .card-content,
+.sub .card-cover4:hover + .card-content {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .sub .container {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+/* Akhir section 3 */
+/* section 4 */
+.contact-section {
+  min-height: 100vh;
+  background-image: url(gambar\ 7.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+}
+
+#contact .container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; */
+}
+
+#contact h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#contact p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contact-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-option {
+  width: 200px;
+  padding: 20px;
+  margin: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.contact-option:hover {
+  transform: translateY(-5px);
+}
+
+.contact-option p {
+  margin-bottom: 10px;
+}
+
+.contact-option a {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.contact-option a:hover {
+  background-color: #0056b3;
+}
+
+/* akhir section 4 */
+#IT {
+  min-height: 100vh;
+  background-image: url(gambar\ 8.jpg);
+  padding: 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.IG {
+  text-align: center;
+}
+
+.IG h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: 'poppins', sans-serif;
+  color: #ffff;
+}
+
+.IG a {
+  color: #ffff;
+  background-color: #007bff;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #21c2db;
+  text-decoration: none;
+  transition: border-color 0.3s;
+}
+
+.IG a:hover {
+  color: #ff0303;
+}
+
+.IG a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #337ab7;
+  bottom: -2px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.IG a:hover::before {
+  transform: scaleX(1);
+}
+/* tutup IT */
+/* CSS untuk animasi */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Menerapkan animasi pada setiap bagian */
+.landing-section,
+.about,
+.sub,
+.contact-section,
+.IT {
+  animation: fadeIn 1s ease-in-out;
+}
+/* footer */
+/* Footer styles */
+/* Styling for the footer */
+.footer {
+  text-align: center;
+  background-color: #042f64; /* Ubah dengan warna latar belakang yang diinginkan */
+  padding: 20px 0;
+  color: #ffff;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer-logo img {
+  width: 100px; /* Sesuaikan ukuran logo gambar IT */
+  height: 100px; /* Sesuaikan ukuran logo gambar IT */
+}
+
+.footer-logo h3 {
+  margin: 0;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.social-media a {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+  color: #f5f5f5;
+  background-color: #042f64;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  background-color: #232121;
+}
+
+.social-media i {
+  font-size: 20px;
+}
+
+.footer-bottom {
+  font-size: 10px;
+  margin-top: 20px;
+}
